@@ -4,28 +4,6 @@
    Type: Fraunces (display) · Inter (text) · IBM Plex Mono (labels)
    ============================================================= */
 
-/* ---------- Local fonts ---------- */
-@font-face {
-  font-family: "Philosopher";
-  src: url("../assets/fonts/Philosopher-Regular.ttf") format("truetype");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Philosopher";
-  src: url("../assets/fonts/Philosopher-Bold.ttf") format("truetype");
-  font-weight: 700; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Philosopher";
-  src: url("../assets/fonts/Philosopher-Italic.ttf") format("truetype");
-  font-weight: 400; font-style: italic; font-display: swap;
-}
-@font-face {
-  font-family: "Philosopher";
-  src: url("../assets/fonts/Philosopher-BoldItalic.ttf") format("truetype");
-  font-weight: 700; font-style: italic; font-display: swap;
-}
-
 /* ---------- Tokens ---------- */
 :root {
   /* Surfaces */
@@ -50,7 +28,7 @@
   --champagne: #CBA36A;
 
   /* Type */
-  --serif: "Philosopher", Georgia, "Times New Roman", serif;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
