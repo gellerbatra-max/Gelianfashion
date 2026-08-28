@@ -290,9 +290,12 @@ body.menu-open .menu { transform: translateY(0); opacity: 1; visibility: visible
 /* ---------- Split (flagship) ---------- */
 .split { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(32px,5vw,72px); align-items: center; }
 .split__list { display: grid; gap: 14px; margin-top: 26px; }
-.split__list li { display: flex; gap: 14px; line-height: 1.55; color: color-mix(in oklab,var(--on-dark) 82%,transparent); }
-.split__list .tick { flex: none; width: 22px; height: 22px; border: 1px solid var(--champagne); border-radius: 999px; display: grid; place-content: center; margin-top: 2px; }
-.split__list .tick::before { content:""; width:6px; height:6px; border-radius:999px; background: var(--champagne); }
+.split__list li { display: flex; gap: 14px; line-height: 1.55; color: var(--ink-80); }
+.split__list .tick { flex: none; width: 22px; height: 22px; border: 1px solid var(--bronze-deep); border-radius: 999px; display: grid; place-content: center; margin-top: 2px; }
+.split__list .tick::before { content:""; width:6px; height:6px; border-radius:999px; background: var(--bronze-deep); }
+.dark .split__list li { color: color-mix(in oklab,var(--on-dark) 82%,transparent); }
+.dark .split__list .tick { border-color: var(--champagne); }
+.dark .split__list .tick::before { background: var(--champagne); }
 @media (max-width: 860px){ .split { grid-template-columns: 1fr; } }
 
 /* ---------- Product cards ---------- */
