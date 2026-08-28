@@ -297,6 +297,12 @@ body.menu-open .menu { transform: translateY(0); opacity: 1; visibility: visible
 .dark .split__list .tick { border-color: var(--champagne); }
 .dark .split__list .tick::before { background: var(--champagne); }
 @media (max-width: 860px){ .split { grid-template-columns: 1fr; } }
+.split--rev .split__body { order: 2; }
+.split--rev .split__media { order: 1; }
+@media (max-width: 860px){ .split--rev .split__body, .split--rev .split__media { order: initial; } }
+
+/* ---------- Product row meta (status pill inline with kicker) ---------- */
+.product-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 
 /* ---------- Product cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 44px; }
