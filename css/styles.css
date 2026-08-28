@@ -39,8 +39,8 @@
   /* Ink */
   --ink: #141414;
   --ink-80: color-mix(in oklab, var(--ink) 80%, transparent);
-  --ink-60: color-mix(in oklab, var(--ink) 58%, transparent);
-  --ink-45: color-mix(in oklab, var(--ink) 45%, transparent);
+  --ink-60: color-mix(in oklab, var(--ink) 70%, transparent);
+  --ink-45: color-mix(in oklab, var(--ink) 60%, transparent);
   --hair: color-mix(in oklab, var(--ink) 14%, transparent);
   --hair-2: color-mix(in oklab, var(--ink) 9%, transparent);
 
