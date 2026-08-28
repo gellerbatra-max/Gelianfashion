@@ -72,4 +72,17 @@
   Array.prototype.forEach.call(document.querySelectorAll("[data-year]"), function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  /* Contact form — front-end confirmation (no backend wired yet) */
+  var cform = document.querySelector("form.form");
+  if (cform) {
+    cform.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = cform.querySelector("#f-email");
+      if (email && !email.value.trim()) { email.focus(); return; }
+      cform.innerHTML =
+        '<p class="h3" style="max-width:24ch">Thank you — we\'ll be in touch shortly.</p>' +
+        '<p class="body" style="margin-top:14px;max-width:42ch">A member of the Gelian team typically replies within one business day.</p>';
+    });
+  }
 })();
