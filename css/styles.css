@@ -107,11 +107,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   font-family: var(--serif);
   font-weight: 320;
   font-optical-sizing: auto;
-  line-height: 1.06;
-  letter-spacing: -0.013em;
-  font-size: clamp(2.15rem, 4.6vw, 4.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.75rem, 3.6vw, 3.2rem);
 }
-.h1 { font-family: var(--serif); font-weight: 330; line-height: 1.12; letter-spacing: -.009em; font-size: clamp(1.9rem, 3.7vw, 3rem); }
+.h1 { font-family: var(--serif); font-weight: 330; line-height: 1.16; letter-spacing: -.007em; font-size: clamp(1.55rem, 2.9vw, 2.35rem); }
 .h2 { font-family: var(--serif); font-weight: 350; line-height: 1.14; letter-spacing: -.007em; font-size: clamp(1.6rem, 2.8vw, 2.4rem); }
 .h3 { font-family: var(--serif); font-weight: 370; line-height: 1.2; letter-spacing: -.005em; font-size: clamp(1.2rem, 1.8vw, 1.5rem); }
 .serif { font-family: var(--serif); font-weight: 350; }
