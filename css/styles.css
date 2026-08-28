@@ -192,7 +192,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .nav.is-scrolled { border-color: var(--hair); }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 16px; }
-.brand { display: inline-flex; align-items: center; gap: 11px; font-family: var(--serif); font-size: 1.05rem; letter-spacing: .01em; }
+.brand { display: inline-flex; align-items: center; gap: 11px; font-family: var(--mono); font-size: 1.05rem; letter-spacing: .01em; }
 .brand__mark { width: 30px; height: 30px; flex: none; }
 .brand__word small { font-family: var(--mono); font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--champagne-deep); display:block; margin-top:-3px; }
 .dark .brand__word small, .footer .brand__word small { color: var(--champagne); }
