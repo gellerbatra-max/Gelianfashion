@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="stylesheet" href="_ds/organic-33ee53a2-b647-48eb-9f07-589cd7e928ba/styles.css">
+  <script src="_ds/organic-33ee53a2-b647-48eb-9f07-589cd7e928ba/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); overflow-x: clip; }
+    a { color: var(--color-accent-700); text-decoration: none; }
+    a:hover { color: var(--color-accent-800); text-decoration: underline; }
+  </style>
+</helmet>
+
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px);">
+
+  <nav class="nav" style="position: sticky; top: 0; z-index: 20; background: var(--color-bg); padding-block: 18px;">
+    <span class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+      <span style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-accent); color: var(--color-accent-100); display: grid; place-content: center; font-family: var(--font-heading); font-size: 18px; flex-shrink: 0;">G</span>
+      Gelian Fashion
+    </span>
+    <a href="Gelian.dc.html">Home</a>
+    <a href="Products.dc.html">Products</a>
+    <a href="Company.dc.html" aria-current="page">Company</a>
+    <a href="Contact.dc.html">Contact</a>
+    <a href="Contact.dc.html" class="btn btn-primary" style="white-space: nowrap;">Request a demo</a>
+  </nav>
+
+  <section style="padding: clamp(40px, 6vw, 72px) 0 40px; display: grid; grid-template-columns: minmax(0,6fr) minmax(0,5fr); gap: 28px clamp(24px, 5vw, 64px); align-items: center;">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 14px;">Company</span>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4vw, 48px); margin: 0; max-width: 14ch;">About Gelian Fashion</h1>
+      <p style="font-size: 16px; line-height: 1.65; max-width: 54ch; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">Gelian (Pvt) Ltd. builds web-based CAD software for the apparel industry, with AI integrated into the design, marker making and cut planning workflow.</p>
+    </div>
+    <figure class="washed" style="margin: 0; border-radius: 40px; overflow: hidden;">
+      <image-slot id="company-hero-model" shape="rect" style="aspect-ratio: 4/3;" placeholder="Drop a team or studio photo" src="assets/company-hero.jpg"></image-slot>
+    </figure>
+  </section>
+
+  <section style="padding: 8px 0 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+    <div style="background: var(--color-accent-100); border-radius: 40px; padding: 32px;">
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; margin: 0;">Vision</h2>
+      <p style="font-size: 15.5px; line-height: 1.65; margin: 14px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">To be the platform apparel manufacturers turn to for design, product development and cut planning — web-based, AI-native, and built around the decisions that make a style profitable.</p>
+    </div>
+    <div style="background: var(--color-accent-2-100); border-radius: 40px; padding: 32px;">
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; margin: 0;">Mission</h2>
+      <p style="font-size: 15.5px; line-height: 1.65; margin: 14px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">We build CAD software that runs entirely in the browser and puts AI to work on repeatable tasks, so design and production teams spend their time on the decisions that shape efficiency, cost and speed to market.</p>
+    </div>
+  </section>
+
+  <section style="padding: 8px 0 56px;">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 14px;">Our approach</span>
+    <div style="display: grid; grid-template-columns: minmax(0,420px) minmax(0,1fr); gap: 28px 56px; align-items: baseline; padding: 20px 0;">
+      <h2 style="position: relative; font-family: var(--font-heading); font-weight: 400; font-size: 24px; margin: 0; padding-left: 36px;">
+        <span style="position: absolute; left: 0; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: var(--color-accent);"></span>
+        No installs, no silos
+      </h2>
+      <p style="font-size: 15.5px; line-height: 1.65; margin: 0; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">We are the only CAD solution in the industry built entirely for the browser — pattern design, marker making, nesting and PLM in one platform, without the standalone installs and version mismatches that come with traditional CAD software.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0,420px) minmax(0,1fr); gap: 28px 56px; align-items: baseline; padding: 20px 0;">
+      <h2 style="position: relative; font-family: var(--font-heading); font-weight: 400; font-size: 24px; margin: 0; padding-left: 36px;">
+        <span style="position: absolute; left: 0; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: var(--color-accent);"></span>
+        AI in every workflow
+      </h2>
+      <p style="font-size: 15.5px; line-height: 1.65; margin: 0; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">AI agents are integrated across the apparel workflow, making repeatable, error-prone steps autonomous — generating a pattern from a sketch and spec, building a marker from a conversation, calculating and entering consumptions. Your team spends its time on the decisions that need a person.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0,420px) minmax(0,1fr); gap: 28px 56px; align-items: baseline; padding: 20px 0;">
+      <h2 style="position: relative; font-family: var(--font-heading); font-weight: 400; font-size: 24px; margin: 0; padding-left: 36px;">
+        <span style="position: absolute; left: 0; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: var(--color-accent);"></span>
+        Data you can act on
+      </h2>
+      <p style="font-size: 15.5px; line-height: 1.65; margin: 0; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Efficiency, consumption and cut-plan data surface as they're generated, in interfaces built for the decision at hand — not buried in a report you pull at the end of the week.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 56px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; max-width: 640px;">
+      <div>
+        <p style="font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin: 0 0 6px; color: color-mix(in srgb, var(--color-text) 65%, transparent);">Company</p>
+        <p style="font-size: 15.5px; line-height: 1.6; margin: 0;">Gelian (Pvt) Ltd.</p>
+      </div>
+      <div>
+        <p style="font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin: 0 0 6px; color: color-mix(in srgb, var(--color-text) 65%, transparent);">Address</p>
+        <p style="font-size: 15.5px; line-height: 1.6; margin: 0;">No. 37, Sri Sumangala Road,<br>Rathmalana</p>
+      </div>
+      <div>
+        <p style="font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin: 0 0 6px; color: color-mix(in srgb, var(--color-text) 65%, transparent);">Phone</p>
+        <p style="font-size: 15.5px; line-height: 1.6; margin: 0;"><a href="tel:+94771776347">+94 77 177 6347</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 28px 0 40px; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <span>© 2026 Gelian (Pvt) Ltd. All rights reserved.</span>
+    <span>No. 37, Sri Sumangala Road, Rathmalana &middot; +94 77 177 6347</span>
+  </footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>

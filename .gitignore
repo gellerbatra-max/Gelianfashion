@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Source archive — the site content is committed in extracted form
+*.zip
+
+# Claude Code local tooling config (machine-specific)
+.claude/
+
+# Design-canvas runtime state (regenerated locally by image-slot.js)
+.image-slots.state.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local

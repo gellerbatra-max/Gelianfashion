@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="stylesheet" href="_ds/organic-33ee53a2-b647-48eb-9f07-589cd7e928ba/styles.css">
+  <script src="_ds/organic-33ee53a2-b647-48eb-9f07-589cd7e928ba/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); overflow-x: clip; }
+    a { color: var(--color-accent-700); text-decoration: none; }
+    a:hover { color: var(--color-accent-800); text-decoration: underline; }
+    .nest-anim { position: relative; width: 100%; height: 100%; background: linear-gradient(135deg, #f3ece0, #eae0cd); overflow: hidden; }
+    .nest-piece { position: absolute; border-radius: 7px; box-shadow: 0 1px 0 rgba(0,0,0,0.08); animation-name: nestPiece; animation-timing-function: cubic-bezier(.22,.61,.36,1); animation-iteration-count: infinite; }
+    @keyframes nestPiece {
+      0%   { transform: translate(var(--sx), var(--sy)) rotate(var(--srot)) scale(0.82); opacity: 0; }
+      42%  { transform: translate(0,0) rotate(0deg) scale(1); opacity: 1; }
+      80%  { transform: translate(0,0) rotate(0deg) scale(1); opacity: 1; }
+      100% { transform: translate(var(--sx), var(--sy)) rotate(var(--srot)) scale(0.82); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .nest-piece { animation: none; opacity: 1; transform: none; }
+    }
+  </style>
+</helmet>
+
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px);">
+
+  <nav class="nav" style="position: sticky; top: 0; z-index: 20; background: var(--color-bg); padding-block: 18px;">
+    <span class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+      <span style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-accent); color: var(--color-accent-100); display: grid; place-content: center; font-family: var(--font-heading); font-size: 18px; flex-shrink: 0;">G</span>
+      Gelian Fashion
+    </span>
+    <a href="Gelian.dc.html" aria-current="page">Home</a>
+    <a href="Products.dc.html">Products</a>
+    <a href="Company.dc.html">Company</a>
+    <a href="Contact.dc.html">Contact</a>
+    <a href="Contact.dc.html" class="btn btn-primary" style="white-space: nowrap;">Request a demo</a>
+  </nav>
+
+  <section style="position: relative; padding: clamp(48px, 8vw, 96px) 0 56px; display: grid; grid-template-columns: minmax(0,6fr) minmax(0,5fr); gap: 32px clamp(24px, 5vw, 64px); align-items: center;">
+    <div style="position: absolute; right: -160px; top: -120px; width: 380px; height: 380px; border-radius: 50%; background: var(--color-accent-2-200); z-index: -1;"></div>
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 14px;">CAD &amp; AI for the apparel industry</span>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(34px, 4.8vw, 64px); line-height: 1.08; margin: 0; max-width: 14ch;">
+        <span style="display:block;">Pattern to cut plan.</span>
+        <span style="display:block;">On the web. With AI.</span>
+      </h1>
+      <p style="font-size: 17px; line-height: 1.65; max-width: 52ch; margin: 26px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">Gelian Fashion is a browser-based CAD platform for apparel manufacturing — pattern design, marker making, nesting, PLM and roll management in one place, with AI agents built into the workflow.</p>
+      <div style="display: flex; gap: 13.2px; flex-wrap: wrap; margin-top: 26px;">
+        <a href="Contact.dc.html" class="btn btn-primary" style="white-space: nowrap;">Request a demo</a>
+        <a href="Products.dc.html" class="btn btn-ghost">See the products</a>
+      </div>
+    </div>
+    <figure class="washed" style="margin: 0; border-radius: 48px; overflow: hidden;">
+      <image-slot id="hero-model" shape="rect" style="aspect-ratio: 4/5;" placeholder="Drop a fashion photo (e.g. a model in garment, design studio)" src="assets/home-hero.jpg"></image-slot>
+    </figure>
+  </section>
+
+  <section aria-label="Our flagship" style="padding: 8px 0 56px;">
+    <div style="background: var(--color-accent-100); border-radius: 56px; padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 64px); display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); gap: 28px clamp(24px, 5vw, 72px); align-items: center;">
+      <div>
+        <span class="tag tag-accent" style="display: inline-block; margin-bottom: 14px;">Flagship product</span>
+        <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(28px, 3.2vw, 40px); margin: 0; max-width: 14ch;">Seamline Ultranest: the fastest route to your best cut plan</h2>
+        <p style="font-size: 15.5px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 18px 0 0; max-width: 48ch;">Modern AI nesting algorithms give you the best marker efficiency in the industry — complete cut plans and markers, generated fast. Compare marker options or ask Ultranest how to adjust a pattern to push efficiency further, and it feeds consumption straight into your PLM's BOM.</p>
+        <a href="Products.dc.html#ultranest" class="btn btn-primary" style="display: inline-block; margin-top: 22px; white-space: nowrap;">Explore Seamline Ultranest</a>
+      </div>
+      <figure class="washed" style="margin: 0; width: min(380px, 100%); justify-self: end; border-radius: 48px; overflow: hidden;">
+        <div class="nest-anim" style="aspect-ratio: 4/3;" aria-label="Animation of colorful garment pattern pieces nesting into a tightly packed marker layout" role="img">
+          <div class="nest-piece" style="left:0%; top:0%; width:31.6%; height:34%; background:#c67139; --sx:-60px; --sy:-40px; --srot:-16deg; animation-duration:6s; animation-delay:0s;"></div>
+          <div class="nest-piece" style="left:33.2%; top:0%; width:31.6%; height:34%; background:#d1a13a; --sx:50px; --sy:-60px; --srot:20deg; animation-duration:6s; animation-delay:.15s;"></div>
+          <div class="nest-piece" style="left:64.8%; top:0%; width:35.2%; height:34%; background:#6b4c7a; --sx:70px; --sy:-30px; --srot:-22deg; animation-duration:6s; animation-delay:.3s;"></div>
+          <div class="nest-piece" style="left:0%; top:35.6%; width:23.95%; height:31%; background:#3d6b6b; --sx:-80px; --sy:20px; --srot:15deg; animation-duration:6s; animation-delay:.45s;"></div>
+          <div class="nest-piece" style="left:25.35%; top:35.6%; width:23.95%; height:31%; background:#7a8a5e; --sx:40px; --sy:60px; --srot:-18deg; animation-duration:6s; animation-delay:.6s;"></div>
+          <div class="nest-piece" style="left:50.7%; top:35.6%; width:23.95%; height:31%; background:#8c491a; --sx:-50px; --sy:-70px; --srot:24deg; animation-duration:6s; animation-delay:.75s;"></div>
+          <div class="nest-piece" style="left:76.05%; top:35.6%; width:23.95%; height:31%; background:#8a3324; --sx:75px; --sy:45px; --srot:-14deg; animation-duration:6s; animation-delay:.9s;"></div>
+          <div class="nest-piece" style="left:0%; top:68.2%; width:36.8%; height:31.8%; background:#d1a13a; --sx:-65px; --sy:55px; --srot:18deg; animation-duration:6s; animation-delay:1.05s;"></div>
+          <div class="nest-piece" style="left:38.4%; top:68.2%; width:30.4%; height:31.8%; background:#3d6b6b; --sx:55px; --sy:-50px; --srot:-20deg; animation-duration:6s; animation-delay:1.2s;"></div>
+          <div class="nest-piece" style="left:70.4%; top:68.2%; width:29.6%; height:31.8%; background:#c67139; --sx:-45px; --sy:65px; --srot:22deg; animation-duration:6s; animation-delay:1.35s;"></div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-label="Gelian, by the numbers" style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: flex-start; padding: 8px 0 56px;">
+    <div style="width: 190px; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent-100); display: grid; place-content: center; text-align: center; padding: 20px; box-sizing: border-box;">
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 3vw, 40px); margin: 0; color: var(--color-accent-700);">6</p>
+      <p style="font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin: 8px 0 0; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Products, one platform</p>
+    </div>
+    <div style="width: 160px; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent-2-200); display: grid; place-content: center; text-align: center; padding: 20px; box-sizing: border-box; align-self: flex-end;">
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(26px, 2.6vw, 34px); margin: 0; color: var(--color-accent-2-800);">100%</p>
+      <p style="font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin: 8px 0 0; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Web-based, nothing to install</p>
+    </div>
+    <div style="width: 220px; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent-2-100); display: grid; place-content: center; text-align: center; padding: 20px; box-sizing: border-box;">
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 3vw, 40px); margin: 0; color: var(--color-accent-2-700);">2</p>
+      <p style="font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin: 8px 0 0; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 16ch; margin-left: auto; margin-right: auto;">AI chat assistants, built in</p>
+    </div>
+    <div style="width: 160px; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent-200); display: grid; place-content: center; text-align: center; padding: 20px; box-sizing: border-box; align-self: flex-end;">
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(26px, 2.6vw, 34px); margin: 0; color: var(--color-accent-800);">1</p>
+      <p style="font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin: 8px 0 0; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Workflow, design to cut</p>
+    </div>
+  </section>
+
+  <section style="padding: 8px 0 56px;">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 14px;">Why Gelian</span>
+    <div style="display: grid; grid-template-columns: minmax(0,420px) minmax(0,1fr); gap: 28px 56px; align-items: baseline; padding: 18px 0;">
+      <h2 style="position: relative; font-family: var(--font-heading); font-weight: 400; font-size: 24px; margin: 0; padding-left: 36px;">
+        <span style="position: absolute; left: 0; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: var(--color-accent);"></span>
+        No installs, no silos
+      </h2>
+      <p style="font-size: 15.5px; line-height: 1.65; margin: 0; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">The only CAD solution in the industry built entirely for the browser — pattern design, marker making, nesting and PLM in one platform.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0,420px) minmax(0,1fr); gap: 28px 56px; align-items: baseline; padding: 18px 0;">
+      <h2 style="position: relative; font-family: var(--font-heading); font-weight: 400; font-size: 24px; margin: 0; padding-left: 36px;">
+        <span style="position: absolute; left: 0; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: var(--color-accent);"></span>
+        AI in every workflow
+      </h2>
+      <p style="font-size: 15.5px; line-height: 1.65; margin: 0; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">AI agents make repeatable, error-prone steps autonomous, so your team spends its time on decisions that need a person.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0,420px) minmax(0,1fr); gap: 28px 56px; align-items: baseline; padding: 18px 0;">
+      <h2 style="position: relative; font-family: var(--font-heading); font-weight: 400; font-size: 24px; margin: 0; padding-left: 36px;">
+        <span style="position: absolute; left: 0; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: var(--color-accent);"></span>
+        Data you can act on
+      </h2>
+      <p style="font-size: 15.5px; line-height: 1.65; margin: 0; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Efficiency, consumption and cut-plan data surface as they're generated — not buried in a report you pull at the end of the week.</p>
+    </div>
+    <a href="Company.dc.html" class="btn btn-ghost" style="display: inline-block; margin-top: 8px;">More on our approach</a>
+  </section>
+
+  <section style="padding: 8px 0 64px;">
+    <div style="background: var(--color-accent-2-100); border-radius: 56px; padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 64px); display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;">
+      <div>
+        <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 26px; margin: 0;">Ready to see it on your styles?</h3>
+        <p style="font-size: 15.5px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 12px 0 0; max-width: 46ch;">Request a demo and we'll walk through the platform with your own patterns and markers.</p>
+      </div>
+      <a href="Contact.dc.html" class="btn btn-primary" style="white-space: nowrap;">Request a demo</a>
+    </div>
+  </section>
+
+  <footer style="padding: 28px 0 40px; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <span>© 2026 Gelian (Pvt) Ltd. All rights reserved.</span>
+    <span>No. 37, Sri Sumangala Road, Rathmalana &middot; +94 77 177 6347</span>
+  </footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>
