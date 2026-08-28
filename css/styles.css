@@ -130,11 +130,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   display: inline-flex; align-items: center; gap: .7em;
   font-family: var(--mono); font-weight: 500; font-size: .95rem;
   letter-spacing: .16em; text-transform: uppercase;
-  color: var(--ink-60);
+  color: var(--bronze-deep);
 }
-.kicker::before { content: ""; width: 26px; height: 1px; background: var(--bronze); }
-.kicker .idx { color: var(--bronze); }
-.dark .kicker { color: color-mix(in oklab, var(--on-dark) 62%, transparent); }
+.kicker::before { content: ""; width: 26px; height: 1px; background: var(--bronze-deep); }
+.kicker .idx { color: var(--bronze-deep); }
+.dark .kicker { color: var(--champagne); }
 .dark .kicker::before { background: var(--champagne); }
 .dark .kicker .idx { color: var(--champagne); }
 
