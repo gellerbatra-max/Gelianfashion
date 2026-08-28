@@ -1,13 +1,8 @@
-# Gelian Fashion
+# Gelian Fashion — Website
 
-Marketing website for **Gelian Fashion** — a browser-based CAD & AI platform for apparel manufacturing (pattern design, marker making, nesting, PLM and roll management).
+Premium marketing site for **Gelian (Pvt) Ltd** — browser-native CAD & AI for the apparel industry, built for the world's fashion houses and the production partners who make for them.
 
-The site is a **static, no-build website**. Pages are authored in Claude Design's `.dc.html` canvas format and render in the browser via a small client-side runtime (`support.js`), which loads React 18 from a CDN at runtime. There is no bundler or compile step — edit the files and refresh.
-
-## Requirements
-
-- [Node.js](https://nodejs.org/) 18+ (only for the local dev server)
-- An internet connection at runtime (React is loaded from the unpkg CDN by `support.js`)
+Hand-built **static site**: plain HTML, CSS and JavaScript. No build step, no framework, no dependencies.
 
 ## Run locally
 
@@ -15,39 +10,36 @@ The site is a **static, no-build website**. Pages are authored in Claude Design'
 npm run dev
 ```
 
-Then open <http://localhost:5178/>. Change the port with `PORT=8080 npm run dev`.
+Then open <http://localhost:5178/>. Override the port with `PORT=8080 npm run dev`.
 
-> The pages **must be served over HTTP** — opening the `.dc.html` files directly via `file://` will not work, because the runtime fetches sibling pages and assets.
+(The pages are plain HTML, so you can also just open `index.html` directly in a browser.)
 
-## Project structure
+## Structure
 
 ```
 .
-├── index.html            # Redirects / to the home page (for static hosts)
-├── Gelian.dc.html        # Home
-├── Products.dc.html      # Products
-├── Company.dc.html       # Company
-├── Contact.dc.html       # Contact
-├── support.js            # Claude Design runtime — renders <x-dc>, loads React
-├── image-slot.js         # <image-slot> component runtime
-├── assets/               # Page hero images
-├── _ds/                  # Design system (tokens, styles.css, bundle) — do not rename
-├── server.js             # Zero-dependency local static server
-├── package.json
-└── github.md             # Claude Design sync notes
+├── index.html          # Home
+├── products.html       # The 6-product Seamline family + workflow
+├── company.html        # Vision, mission, approach
+├── contact.html        # Demo request form + details
+├── css/styles.css      # Design system (tokens, type, components, responsive)
+├── js/main.js          # Nav state, mobile menu, scroll-reveal, count-up
+├── assets/             # favicon + imagery
+└── server.js           # Zero-dependency local dev server
 ```
 
-## Editing
+## Design — "Precision Atelier"
 
-- Each page is a standalone `.dc.html` file. The visible markup lives inside the `<x-dc>` element; shared `<head>` content (fonts, the design-system stylesheet, scripts) lives in the `<helmet>` block.
-- Global colors, fonts and spacing are design tokens (CSS variables like `--color-accent`, `--font-heading`) defined in `_ds/…/styles.css`. Prefer these tokens over hard-coded values so the pages stay consistent.
-- Images use the `<image-slot>` element with a `src` pointing into `assets/`.
+Editorial luxury fused with CAD precision. **Fraunces** display serif + **Inter** body + **IBM Plex Mono** labels; warm bone & ink with a refined bronze accent and dramatic obsidian sections; hairline rules, measurement ticks, and an animated marker-nesting motif.
 
-## Deploying
+## Notes
 
-Any static host works (GitHub Pages, Netlify, Vercel, Cloudflare Pages, S3). Just publish the repository root.
+- **Imagery** is temporary — curated free Unsplash photos with a duotone treatment. Drop real logo / product screenshots / photography into `assets/` and update the `<img src>` references.
+- **Contact form** is front-end only. Wire a backend (Formspree, Netlify Forms, or your own endpoint) to actually send submissions.
 
-- **GitHub Pages:** the included `.nojekyll` file is required — without it, Jekyll drops the `_ds/` folder (leading underscore) and the site loses all its styles.
+## Deploy
+
+Any static host (GitHub Pages, Netlify, Vercel, Cloudflare Pages). Publish the repository root. `.nojekyll` is included for GitHub Pages.
 
 ## License
 
