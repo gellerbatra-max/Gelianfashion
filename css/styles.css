@@ -7,9 +7,9 @@
 /* ---------- Tokens ---------- */
 :root {
   /* Surfaces */
-  --paper: #FBF9F4;
-  --bone: #F4F0E7;
-  --bone-2: #ECE5D6;
+  --paper: #FFFFFF;
+  --bone: #FAFAF9;
+  --bone-2: #F1F1EF;
   --obsidian: #100E0B;
   --obsidian-2: #191510;
   --on-dark: #ECE6D7;
