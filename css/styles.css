@@ -411,6 +411,27 @@ body.menu-open .menu { transform: translateY(0); opacity: 1; visibility: visible
 .input:focus, .textarea:focus { outline: none; border-color: var(--bronze); }
 .textarea { resize: vertical; min-height: 96px; }
 
+/* ---------- ROI calculator ---------- */
+.calc { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(32px,5vw,72px); align-items: center; }
+@media (max-width: 860px){ .calc { grid-template-columns: 1fr; } }
+.calc__card { background: var(--paper); border: 1px solid var(--hair); padding: clamp(28px,3vw,40px); }
+.calc__field { display: grid; gap: 10px; }
+.select {
+  width: 100%; appearance: none; -webkit-appearance: none;
+  background: var(--bone); border: 1px solid var(--hair); border-radius: 3px;
+  padding: 14px 42px 14px 14px; font: 400 1.02rem var(--sans); color: var(--ink);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23141414'><path d='M5 7l5 5 5-5' stroke='%23141414' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat; background-position: right 14px center; background-size: 14px;
+  cursor: pointer; transition: border-color .3s var(--ease);
+}
+.select:focus { outline: none; border-color: var(--bronze-deep); }
+.calc__btn { width: 100%; justify-content: center; margin-top: 22px; }
+.calc__note { margin-top: 18px; font-size: .84rem; line-height: 1.55; color: var(--ink-60); }
+.calc__result { margin-top: 0; max-height: 0; opacity: 0; overflow: hidden; transition: max-height .5s var(--ease), opacity .4s var(--ease), margin-top .5s var(--ease); }
+.calc__result.is-visible { margin-top: 22px; max-height: 200px; opacity: 1; padding-top: 22px; border-top: 1px solid var(--hair); }
+.calc__result .n { font-family: var(--serif); font-size: clamp(1.9rem,3vw,2.5rem); font-weight: 350; color: var(--bronze-deep); line-height: 1; }
+.calc__result .l { font-family: var(--mono); font-size: .84rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-60); margin-top: 8px; }
+
 /* ---------- Contact detail grid ---------- */
 .details { display: grid; gap: 28px; }
 .detail__k { font-family: var(--mono); font-size: .9rem; letter-spacing: .105em; text-transform: uppercase; color: var(--champagne-deep); margin-bottom: 8px; }

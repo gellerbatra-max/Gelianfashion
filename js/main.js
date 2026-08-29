@@ -73,6 +73,31 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* ROI calculator */
+  var calcBtn = document.getElementById("calc-btn");
+  if (calcBtn) {
+    var calcSelect = document.getElementById("calc-spend");
+    var calcResult = document.getElementById("calc-result");
+    var calcValue = document.getElementById("calc-result-value");
+    function fmtMoney(n) {
+      if (n >= 1000000) {
+        var m = n / 1000000;
+        return "$" + (m % 1 === 0 ? m.toFixed(0) : m.toFixed(1)) + "M";
+      }
+      return "$" + Math.round(n / 1000) + "K";
+    }
+    calcBtn.addEventListener("click", function () {
+      var spend = parseFloat(calcSelect.value);
+      if (!spend) { calcSelect.focus(); return; }
+      var low = spend * 0.10, high = spend * 0.15;
+      calcValue.textContent = fmtMoney(low) + " – " + fmtMoney(high);
+      calcResult.classList.add("is-visible");
+    });
+    calcSelect.addEventListener("change", function () {
+      calcResult.classList.remove("is-visible");
+    });
+  }
+
   /* Contact form — front-end confirmation (no backend wired yet) */
   var cform = document.querySelector("form.form");
   if (cform) {
