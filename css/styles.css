@@ -351,6 +351,26 @@ body.menu-open .menu { transform: translateY(0); opacity: 1; visibility: visible
 .dark .stat .n { color: var(--on-dark); }
 .dark .stat .l { color: color-mix(in oklab, var(--on-dark) 58%, transparent); }
 
+/* ---------- Math cascade (financial impact walkthrough) ---------- */
+.math { margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--hair); }
+.math__cell { padding: clamp(24px,2.6vw,34px) clamp(18px,2vw,26px); border-right: 1px solid var(--hair); position: relative; background: var(--paper); }
+.math__cell:last-child { border-right: 0; }
+.math__cell::after { content:"→"; position:absolute; right:-13px; top:50%; transform:translateY(-50%); font-family:var(--mono); color:var(--bronze-deep); background:var(--paper); width:26px; height:26px; border-radius:999px; border:1px solid var(--hair); display:grid; place-content:center; font-size:.8rem; z-index:2; }
+.math__cell:last-child::after { display:none; }
+.math__cell .k { font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-45); }
+.math__cell .v { font-family: var(--serif); font-size: clamp(1.5rem,2.3vw,1.95rem); font-weight: 360; margin-top: 10px; color: var(--ink); line-height: 1.1; }
+.math__cell .d { font-size: .84rem; color: var(--ink-60); margin-top: 6px; line-height: 1.4; }
+.math__payoff { margin-top: 1px; padding: clamp(24px,2.8vw,36px); background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.math__payoff .v { font-family: var(--serif); font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 350; color: var(--champagne); }
+.math__payoff .l { font-family: var(--mono); font-size: .84rem; letter-spacing: .1em; text-transform: uppercase; color: color-mix(in oklab, var(--paper) 65%, transparent); margin-top: 6px; }
+.math__note { margin-top: 18px; font-size: .84rem; color: var(--ink-60); line-height: 1.6; max-width: 68ch; }
+@media (max-width: 760px) {
+  .math { grid-template-columns: 1fr; }
+  .math__cell { border-right: 0; border-bottom: 1px solid var(--hair); }
+  .math__cell:last-child { border-bottom: 0; }
+  .math__cell::after { content:"↓"; right: auto; top: auto; bottom: -13px; left: 50%; transform: translateX(-50%); }
+}
+
 /* ---------- Shift (before / after narrative) ---------- */
 .shift { display: grid; grid-template-columns: 1fr auto 1fr; gap: clamp(24px,4vw,56px); align-items: start; margin-top: 48px; }
 .shift__label { display: inline-flex; align-items: center; gap: .6em; font-family: var(--mono); font-weight: 500; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
