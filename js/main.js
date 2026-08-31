@@ -76,7 +76,7 @@
   /* ROI calculator */
   var calcBtn = document.getElementById("calc-btn");
   if (calcBtn) {
-    var calcSelect = document.getElementById("calc-spend");
+    var calcInput = document.getElementById("calc-spend");
     var calcResult = document.getElementById("calc-result");
     var calcValue = document.getElementById("calc-result-value");
     function fmtMoney(n) {
@@ -87,13 +87,13 @@
       return "$" + Math.round(n / 1000) + "K";
     }
     calcBtn.addEventListener("click", function () {
-      var spend = parseFloat(calcSelect.value);
-      if (!spend) { calcSelect.focus(); return; }
+      var spend = parseFloat(calcInput.value) * 1000000;
+      if (!spend || spend <= 0) { calcInput.focus(); return; }
       var low = spend * 0.10, high = spend * 0.15;
       calcValue.textContent = fmtMoney(low) + " – " + fmtMoney(high);
       calcResult.classList.add("is-visible");
     });
-    calcSelect.addEventListener("change", function () {
+    calcInput.addEventListener("input", function () {
       calcResult.classList.remove("is-visible");
     });
   }

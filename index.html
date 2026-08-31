@@ -104,8 +104,8 @@
       </div>
     </section>
 
-    <!-- THE MATH -->
-    <section class="section">
+    <!-- THE MATH + ROI CALCULATOR -->
+    <section class="section" id="calc">
       <div class="wrap">
         <span class="kicker"><span class="idx">01</span> · The math</span>
         <h2 class="h2 head__title" data-reveal style="margin-top:18px;max-width:22ch">A few points of efficiency. A very different bottom line.</h2>
@@ -133,14 +133,36 @@
             <div class="d">From closing a 10-point gap</div>
           </div>
         </div>
-        <div class="math__payoff" data-reveal style="--i:3">
-          <div>
-            <div class="v">+50%</div>
-            <div class="l">Potential lift to operating margin</div>
+
+        <div class="calc" data-reveal style="--i:3;margin-top:clamp(32px,4vw,48px);align-items:stretch">
+          <div style="display:flex;flex-direction:column;justify-content:space-between;height:100%">
+            <div class="math__payoff" style="margin-top:0;height:100%;flex-direction:column;align-items:flex-start;justify-content:center">
+              <div>
+                <div class="v">+50%</div>
+                <div class="l">Potential lift to operating margin</div>
+              </div>
+              <p class="math__note" style="margin-top:18px;color:color-mix(in oklab, var(--paper) 65%, transparent)">Illustrative example only, assuming a company with $1B revenue, a 50% material cost ratio, and a $100M operating profit. The efficiency range (75–80% typical, 85–90%+ achievable) reflects published industry benchmarks, not a claim about any specific competitor's software. Actual results depend on your product mix, current efficiency, and fabric cost.</p>
+            </div>
           </div>
-          <a class="link" href="#calc" style="color:var(--paper)"><span>See it with your own numbers</span><span class="arw" aria-hidden="true">→</span></a>
+          <div class="calc__card">
+            <span class="kicker"><span class="idx">See it with your numbers</span></span>
+            <div class="calc__field" style="margin-top:18px">
+              <label class="label" for="calc-spend">Annual fabric spend</label>
+              <div class="calc__inputgroup">
+                <span class="calc__prefix">$</span>
+                <input class="calc__input" type="number" id="calc-spend" placeholder="e.g. 25" min="0" step="0.1" inputmode="decimal">
+                <span class="calc__suffix">Million&nbsp;USD</span>
+              </div>
+            </div>
+            <button class="btn calc__btn" type="button" id="calc-btn"><span>See your savings</span></button>
+            <p class="calc__note">Estimates only, modeled on the same efficiency gap illustrated above — closing it typically saves 10–15% of fabric spend. Actual results depend on your product mix, fabric, and current utilization.</p>
+            <div class="calc__result" id="calc-result">
+              <div class="n" id="calc-result-value">—</div>
+              <div class="l">Estimated annual savings</div>
+              <div style="margin-top:16px"><a class="link" href="contact.html"><span>Map this to your floor</span><span class="arw" aria-hidden="true">→</span></a></div>
+            </div>
+          </div>
         </div>
-        <p class="math__note" data-reveal style="--i:4">Illustrative example only, assuming a company with $1B revenue, a 50% material cost ratio, and a $100M operating profit. The efficiency range (75–80% typical, 85–90%+ achievable) reflects published industry benchmarks, not a claim about any specific competitor's software. Actual results depend on your product mix, current efficiency, and fabric cost.</p>
       </div>
     </section>
 
@@ -201,23 +223,33 @@
         <p class="body" data-reveal style="--i:1;margin-top:16px;max-width:52ch">Most marker-making and nesting software still ships as a desktop install, tied to one machine and one version. Gelian was built the other way round.</p>
         <div class="reasons" data-reveal style="--i:2">
           <div class="reason">
+            <span class="reason__n">01</span>
             <span class="reason__was">Installed per seat, licensed per machine</span>
+            <span class="reason__arw" aria-hidden="true">→</span>
             <span class="reason__now">Opens in any browser, on any device, in seconds</span>
           </div>
           <div class="reason">
+            <span class="reason__n">02</span>
             <span class="reason__was">A different file format at every handoff</span>
+            <span class="reason__arw" aria-hidden="true">→</span>
             <span class="reason__now">One dataset, from first pattern to final cut plan</span>
           </div>
           <div class="reason">
+            <span class="reason__n">03</span>
             <span class="reason__was">Version drift between studio and factory floor</span>
+            <span class="reason__arw" aria-hidden="true">→</span>
             <span class="reason__now">Everyone on the same version, automatically</span>
           </div>
           <div class="reason">
+            <span class="reason__n">04</span>
             <span class="reason__was">Repeatable steps done by hand, every time</span>
+            <span class="reason__arw" aria-hidden="true">→</span>
             <span class="reason__now">An AI assistant drafts the repeatable steps for you</span>
           </div>
           <div class="reason">
+            <span class="reason__n">05</span>
             <span class="reason__was">Efficiency figures land in a report, days later</span>
+            <span class="reason__arw" aria-hidden="true">→</span>
             <span class="reason__now">Efficiency and consumption surface the moment they're generated</span>
           </div>
         </div>
@@ -288,37 +320,6 @@
             <img src="https://images.unsplash.com/photo-1786276479250-e5840e89742e?q=80&w=1200&auto=format&fit=crop" alt="Hands cutting a paper pattern — placeholder imagery" loading="lazy">
             <span class="shot__cap">Ultranest · marker &amp; cut planning</span>
           </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROI CALCULATOR -->
-    <section class="section--tight" id="calc">
-      <div class="wrap calc">
-        <div data-reveal>
-          <span class="kicker"><span class="idx">05</span> · ROI calculator</span>
-          <h2 class="h2" style="margin-top:18px;max-width:14ch">Calculate your savings.</h2>
-          <p class="body" style="margin-top:18px;max-width:44ch">A 10–15% reduction in fabric waste compounds fast at production scale. Enter your annual fabric spend to see the opportunity — then let's map it to your floor in a personalized demo.</p>
-        </div>
-        <div class="calc__card" data-reveal style="--i:1">
-          <div class="calc__field">
-            <label class="label" for="calc-spend">Annual fabric spend</label>
-            <select class="select" id="calc-spend">
-              <option value="" selected disabled>Select a range</option>
-              <option value="750000">Under $1M</option>
-              <option value="3000000">$1M – $5M</option>
-              <option value="12500000">$5M – $20M</option>
-              <option value="35000000">$20M – $50M</option>
-              <option value="75000000">$50M+</option>
-            </select>
-          </div>
-          <button class="btn calc__btn" type="button" id="calc-btn"><span>See your savings</span></button>
-          <p class="calc__note">Estimates only, based on a 10–15% efficiency gain. Actual results depend on your product mix, fabric, and current utilization.</p>
-          <div class="calc__result" id="calc-result">
-            <div class="n" id="calc-result-value">—</div>
-            <div class="l">Estimated annual savings</div>
-            <div style="margin-top:16px"><a class="link" href="contact.html"><span>Map this to your floor</span><span class="arw" aria-hidden="true">→</span></a></div>
-          </div>
         </div>
       </div>
     </section>
