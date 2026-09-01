@@ -52,11 +52,11 @@
   <main id="main">
 
     <!-- HERO -->
-    <section class="section--tight">
+    <section class="section--tight" style="padding-top:clamp(16px,2vw,32px)">
       <div class="wrap">
         <span class="kicker" data-reveal><span class="idx">Contact</span></span>
-        <h1 class="display" data-reveal style="--i:1;margin-top:18px;max-width:15ch">Talk to us about your workflow.</h1>
-        <p class="lead" data-reveal style="--i:2;margin-top:22px">Tell us about your current setup and we'll show you where Gelian fits — a single product or the full platform.</p>
+        <h1 class="display" data-reveal style="--i:1;margin-top:18px;max-width:15ch">Talk to us.</h1>
+        <p class="lead" data-reveal style="--i:2;margin-top:22px">Tell us about your current setup and we'll show you where Gelian brings edge.</p>
       </div>
     </section>
 
@@ -76,6 +76,16 @@
             <div class="field">
               <label class="label" for="f-email">Work email</label>
               <input class="input" id="f-email" name="email" type="email" placeholder="you@company.com" autocomplete="email">
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+              <div class="field">
+                <label class="label" for="f-phone">Phone</label>
+                <input class="input" id="f-phone" name="phone" type="tel" placeholder="+1 234 567 8900" autocomplete="tel">
+              </div>
+              <div class="field">
+                <label class="label" for="f-country">Country</label>
+                <input class="input" id="f-country" name="country" type="text" placeholder="Your country" autocomplete="country-name">
+              </div>
             </div>
             <div class="field">
               <label class="label" for="f-msg">What are you looking to solve?</label>
