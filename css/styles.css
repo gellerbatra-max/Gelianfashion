@@ -226,6 +226,15 @@ body.menu-open .menu { transform: translateY(0); opacity: 1; visibility: visible
 
 /* ---------- Hero ---------- */
 .hero { position: relative; overflow: hidden; padding-top: clamp(14px, 1.8vw, 24px); padding-bottom: clamp(56px, 9vw, 128px); }
+
+/* ---------- Full-bleed photo hero banner ---------- */
+.hero-banner { position: relative; overflow: hidden; min-height: clamp(460px, 85vh, 780px); display: flex; align-items: flex-end; }
+@media (max-width: 640px) { .hero-banner { min-height: clamp(420px, 78vh, 620px); } }
+.hero-banner__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05) brightness(.7); }
+.hero-banner__scrim { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(16,14,11,.92) 0%, rgba(16,14,11,.55) 45%, rgba(16,14,11,.15) 75%); }
+.hero-banner__content { position: relative; z-index: 2; padding-block: clamp(48px,7vw,88px); }
+.on-photo .kicker::before { background: var(--champagne); }
+.on-photo .kicker .idx { color: var(--champagne); }
 .hero__scroll { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; z-index: 2; }
 .hero__scroll span:first-child { font-family: var(--mono); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: color-mix(in oklab, var(--on-dark) 45%, transparent); }
 .hero__scroll-line { width: 1px; height: 26px; background: linear-gradient(var(--champagne-deep), transparent); animation: heroScroll 1.8s ease-in-out infinite; }
@@ -503,7 +512,7 @@ body.menu-open .menu { transform: translateY(0); opacity: 1; visibility: visible
 .detail__v a:hover { color: var(--bronze); }
 
 /* ---------- Footer ---------- */
-.footer { background: var(--obsidian); color: var(--on-dark); padding-top: clamp(56px,7vw,96px); }
+.footer { background: var(--obsidian); color: var(--on-dark); padding-top: clamp(56px,7vw,96px); border-top: 1px solid color-mix(in oklab, var(--on-dark) 16%, transparent); }
 .footer__top { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 40px; }
 .footer__brand .brand { color: var(--on-dark); }
 .footer__tag { margin-top: 20px; color: color-mix(in oklab,var(--on-dark) 66%,transparent); max-width: 34ch; line-height: 1.6; }
