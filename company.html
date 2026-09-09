@@ -25,7 +25,7 @@
     <div class="wrap nav__inner">
       <a class="brand" href="index.html" aria-label="Gelian — home">
         <svg class="brand__mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="#7E4025" stroke-width="1.25"/>
+          <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="var(--ink-60)" stroke-width="1.25"/>
           <text x="16.61" y="16.18" text-anchor="middle" dominant-baseline="central" font-family="Philosopher, Georgia, serif" font-weight="700" font-size="19" fill="#E8352A">G</text>
         </svg>
         <span class="brand__word">Geli<span class="a-accent">a</span>n<small>Fashion</small></span>
@@ -52,15 +52,20 @@
   <main id="main">
 
     <!-- HERO -->
-    <section class="heroI">
-      <div class="heroI__media">
+    <section class="ubsHero">
+      <div class="ubsHero__media">
         <img src="assets/images/company-band.jpg" alt="An automated cutting machine precisely cutting fabric in a modern garment factory">
       </div>
       <div class="wrap">
-        <div class="heroI__text">
-          <span class="kicker" data-reveal><span class="idx">About Gelian Fashion</span></span>
-          <h1 class="heroI__title" data-reveal style="--i:1">The fashion-making arm of Gelian.</h1>
-          <p class="heroI__lead" data-reveal style="--i:2">Gelian Fashion is a dedicated setup built to invent software solutions for the bottlenecks in garment manufacturing — aiming to deliver fashion to market with fewer resources, at lower cost, and faster than the competitors — offering sustainable competitive edge that lasts.</p>
+        <div class="ubsHero__card">
+          <div class="textbar">
+            <span class="kicker" data-reveal style="margin-bottom:14px"><span class="idx">About Gelian Fashion</span></span>
+            <h1 class="ubsHero__title" data-reveal style="--i:1">The fashion-making arm of Gelian.</h1>
+            <p class="ubsHero__sub" data-reveal style="--i:2">Gelian Fashion is a dedicated setup built to invent software solutions for the bottlenecks in garment manufacturing — aiming to deliver fashion to market with fewer resources, at lower cost, and faster than the competitors — offering sustainable competitive edge that lasts.</p>
+          </div>
+          <div class="ubsHero__actions" data-reveal style="--i:3">
+            <a class="btn" href="contact.html"><span>Request a demo</span><span class="arw" aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </div>
     </section>
@@ -125,11 +130,11 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair)">
           <div style="background:var(--bone);padding:clamp(28px,3.4vw,48px)" data-reveal>
             <span class="kicker"><span class="idx">Vision</span></span>
-            <p class="h3" style="margin-top:20px">To be who apparel manufacturers turn to for marker making and nesting — closing the gap between the 70–80% efficiency most cutting rooms accept and the 85–90% that's actually achievable.</p>
+            <p class="h3" style="margin-top:20px">To be the number one apparel-tech solution provider for leading global clothing brands and production houses.</p>
           </div>
           <div style="background:var(--bone);padding:clamp(28px,3.4vw,48px);--i:1" data-reveal>
             <span class="kicker"><span class="idx">Mission</span></span>
-            <p class="h3" style="margin-top:20px">To build AI-powered marker-making and nesting software that runs entirely in the browser — so the most time- and fabric-consuming step in production takes minutes, not a full shift.</p>
+            <p class="h3" style="margin-top:20px">To invent inspired software solutions that address the bottlenecks of apparel manufacturing.</p>
           </div>
         </div>
       </div>
@@ -183,7 +188,7 @@
         <div class="footer__brand">
           <a class="brand" href="index.html" aria-label="Gelian — home">
             <svg class="brand__mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="#CF8B6E" stroke-width="1.25"/>
+              <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="color-mix(in oklab, var(--on-dark) 58%, transparent)" stroke-width="1.25"/>
               <text x="16.61" y="16.18" text-anchor="middle" dominant-baseline="central" font-family="Philosopher, Georgia, serif" font-weight="700" font-size="19" fill="#E8352A">G</text>
             </svg>
             <span class="brand__word">Geli<span class="a-accent">a</span>n<small>Fashion</small></span>

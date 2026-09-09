@@ -25,7 +25,7 @@
     <div class="wrap nav__inner">
       <a class="brand" href="index.html" aria-label="Gelian — home">
         <svg class="brand__mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="#7E4025" stroke-width="1.25"/>
+          <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="var(--ink-60)" stroke-width="1.25"/>
           <text x="16.61" y="16.18" text-anchor="middle" dominant-baseline="central" font-family="Philosopher, Georgia, serif" font-weight="700" font-size="19" fill="#E8352A">G</text>
         </svg>
         <span class="brand__word">Geli<span class="a-accent">a</span>n<small>Fashion</small></span>
@@ -52,11 +52,18 @@
   <main id="main">
 
     <!-- HERO -->
-    <section class="section--tight" style="padding-top:clamp(16px,2vw,32px)">
+    <section class="ubsHero">
+      <div class="ubsHero__media">
+        <img src="assets/images/contact-hero.jpg" alt="A reviewer inspecting a garment on a mannequin with a clipboard, sewing operators and racks of finished dresses in the background, and a table with pattern pieces in the foreground">
+      </div>
       <div class="wrap">
-        <span class="kicker" data-reveal><span class="idx">Contact</span></span>
-        <h1 class="display" data-reveal style="--i:1;margin-top:18px;max-width:15ch">Talk to us.</h1>
-        <p class="lead" data-reveal style="--i:2;margin-top:22px">Tell us about your current setup and we'll show you where Gelian brings edge.</p>
+        <div class="ubsHero__card">
+          <div class="textbar">
+            <span class="kicker" data-reveal style="margin-bottom:14px"><span class="idx">Contact</span></span>
+            <h1 class="ubsHero__title" data-reveal style="--i:1">Talk to us.</h1>
+            <p class="ubsHero__sub" data-reveal style="--i:2">Tell us about your current setup and we'll show you where Gelian brings edge.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -137,7 +144,7 @@
         <div class="footer__brand">
           <a class="brand" href="index.html" aria-label="Gelian — home">
             <svg class="brand__mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="#CF8B6E" stroke-width="1.25"/>
+              <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="color-mix(in oklab, var(--on-dark) 58%, transparent)" stroke-width="1.25"/>
               <text x="16.61" y="16.18" text-anchor="middle" dominant-baseline="central" font-family="Philosopher, Georgia, serif" font-weight="700" font-size="19" fill="#E8352A">G</text>
             </svg>
             <span class="brand__word">Geli<span class="a-accent">a</span>n<small>Fashion</small></span>

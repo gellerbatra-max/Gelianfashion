@@ -49,6 +49,7 @@
   --red-deep: #B80000;
   --red-light: #FF3B3B;
 
+
   /* Type */
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -130,12 +131,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* Mono kicker with leading tick + index */
 .kicker {
   display: inline-flex; flex-wrap: wrap; align-items: center; row-gap: 6px; column-gap: .7em;
-  font-family: var(--mono); font-weight: 500; font-size: .95rem;
+  font-family: var(--mono); font-weight: 500; font-size: 1.1rem;
   letter-spacing: .16em; text-transform: uppercase;
-  color: var(--red-deep);
+  color: var(--red);
 }
-.kicker::before { content: ""; width: 26px; height: 1px; background: var(--red-deep); }
-.kicker .idx { color: var(--red-deep); }
+.kicker::before { content: ""; width: 26px; height: 1px; background: var(--red); }
+.kicker .idx { color: var(--red); }
 .dark .kicker { color: var(--red-light); }
 .dark .kicker::before { background: var(--red-light); }
 .dark .kicker .idx { color: var(--red-light); }
@@ -152,7 +153,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ---------- Buttons ---------- */
 .btn {
-  --bg: var(--ink); --fg: var(--paper); --bd: var(--ink);
+  --bg: var(--ink-60); --fg: var(--paper); --bd: var(--ink-60);
   display: inline-flex; align-items: center; gap: .7em;
   padding: .92em 1.5em;
   background: var(--bg); color: var(--fg);
@@ -197,11 +198,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .brand { display: inline-flex; align-items: center; gap: 14px; font-family: var(--mono); font-weight: 700; font-size: 1.35rem; letter-spacing: .22em; text-transform: uppercase; }
 .brand .a-accent { color: var(--red); }
 .brand__mark { width: 42px; height: 42px; flex: none; }
-.brand__word small { font-family: var(--mono); font-size: .85rem; letter-spacing: .22em; text-transform: uppercase; color: var(--red-deep); display:block; margin-top:-2px; padding-left: 4px; }
-.dark .brand__word small, .footer .brand__word small { color: var(--red-light); }
+.brand__word small { font-family: var(--mono); font-size: .85rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-60); display:block; margin-top:-2px; padding-left: 4px; }
+.dark .brand__word small, .footer .brand__word small { color: color-mix(in oklab, var(--on-dark) 58%, transparent); }
 .nav__links { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 40px); }
-.nav__link { font: 500 .99rem var(--mono); letter-spacing: .085em; text-transform: uppercase; color: var(--red-deep); transition: color .3s var(--ease); }
-.nav__link:hover, .nav__link[aria-current="page"] { color: var(--ink); }
+.nav__link { font: 500 .99rem var(--mono); letter-spacing: .085em; text-transform: uppercase; color: var(--ink); transition: color .3s var(--ease); }
+.nav__link:hover, .nav__link[aria-current="page"] { color: var(--red); }
 .nav__cta { display: inline-flex; }
 .nav__toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--hair); border-radius: 999px; background: transparent; align-items: center; justify-content: center; }
 .nav__toggle span, .nav__toggle span::before, .nav__toggle span::after { content:""; display:block; width: 17px; height: 1.5px; background: var(--ink); transition: transform .35s var(--ease), opacity .2s; position: relative; }
@@ -230,27 +231,21 @@ body.menu-open .menu { transform: translateY(0); opacity: 1; visibility: visible
 .ubsHero__card {
   position: relative; z-index: 2; max-width: 780px;
   background: linear-gradient(90deg, color-mix(in oklab, var(--bone) 92%, transparent) 0%, color-mix(in oklab, var(--bone) 80%, transparent) 62%, transparent 100%);
-  border-left: 4px solid var(--red-deep);
-  padding: clamp(30px,4vw,44px) clamp(56px,7vw,88px) clamp(30px,4vw,44px) clamp(32px,4.2vw,44px);
+  padding: clamp(30px,4vw,44px) clamp(56px,7vw,88px) clamp(30px,4vw,44px) clamp(20px,2.6vw,28px);
 }
 .ubsHero__title { font-family: var(--serif); font-weight: 340; font-size: clamp(1.9rem,3.2vw,2.6rem); line-height: 1.14; letter-spacing: -.008em; color: var(--ink); }
 .ubsHero__title em { font-style: normal; color: var(--red); }
 .ubsHero__sub { margin-top: 18px; max-width: 42ch; color: var(--ink-80); font-size: clamp(.98rem,1.1vw,1.05rem); line-height: 1.6; }
-.ubsHero__actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; }
+.ubsHero__actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; padding-left: clamp(24px,3.6vw,32px); }
 .ubsHero__actions .btn { --bg: var(--red); --fg: var(--paper); --bd: var(--red); }
 .ubsHero__actions .btn:hover { --bg: var(--red-deep); --bd: var(--red-deep); }
 @media (max-width: 640px) { .ubsHero__card { max-width: 100%; padding-right: clamp(32px,4.2vw,44px); background: color-mix(in oklab, var(--bone) 90%, transparent); } }
 
+/* Shared accent bar for hero text blocks — consistent red rule beside kicker/heading/lead */
+.textbar { border-left: 4px solid var(--red); padding-left: clamp(20px,2.6vw,28px); }
+.dark .textbar { border-left-color: var(--red); }
+
 /* ---------- Hero I: full-bleed background photo, text left, dark scrim ---------- */
-.heroI { position: relative; min-height: clamp(480px,82vh,720px); display: flex; align-items: center; overflow: hidden; }
-.heroI__media { position: absolute; inset: 0; z-index: 0; }
-.heroI__media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05) brightness(.85); }
-.heroI__text { position: relative; z-index: 2; max-width: 540px; background: rgba(16,14,11,.88); padding: clamp(28px,4vw,44px) clamp(28px,4vw,40px); border-radius: 4px; }
-.heroI__text .kicker::before { background: var(--red-light); }
-.heroI__text .kicker .idx { color: var(--red-light); }
-.heroI__title { font-family: var(--serif); font-weight: 340; font-size: clamp(2.3rem,4.4vw,3.6rem); line-height: 1.08; letter-spacing: -.01em; color: var(--paper); margin-top: 14px; }
-.heroI__lead { margin-top: 20px; max-width: 48ch; font-family: var(--sans); color: color-mix(in oklab, var(--paper) 82%, transparent); font-size: clamp(1rem,1.2vw,1.1rem); line-height: 1.64; }
-@media (max-width: 640px) { .heroI { min-height: clamp(420px,72vh,600px); } .heroI__text { max-width: 100%; } }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 
 /* ---------- Ecosystem strip ---------- */
